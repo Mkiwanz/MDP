@@ -1,4 +1,5 @@
 package com.example.mdp
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -15,11 +16,11 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main)
 
         val editTextFoodName: EditText = findViewById(R.id.editTextFoodName)
-        val textViewSelectedFood: TextView = findViewById(R.id.textViewSelectedFood)
-        val buttonAddFood: Button = findViewById(R.id.buttonAddFood)
-        val buttonDecide: Button = findViewById(R.id.buttonDecide)
+        val tvSelectedFood: TextView = findViewById(R.id.textViewSelectedFood)
+        val btnAddFood: Button = findViewById(R.id.buttonAddFood)
+        val btnDecide: Button = findViewById(R.id.buttonDecide)
 
-        buttonAddFood.setOnClickListener {
+        btnAddFood.setOnClickListener {
             val newFood = editTextFoodName.text.toString().trim()
             if (newFood.isNotEmpty()) {
                 foods.add(newFood)
@@ -27,9 +28,9 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        buttonDecide.setOnClickListener {
+        btnDecide.setOnClickListener {
             val randomFood = foods[Random().nextInt(foods.size)]
-            textViewSelectedFood.text = randomFood
+            tvSelectedFood.text = randomFood
         }
     }
 }

@@ -11,14 +11,14 @@
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:src="@drawable/dd_logo" />
 
     <TextView
         android:id="@+id/textViewSelectedFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Selected Food"
+        android:text="Chosen Food"
         android:textSize="20sp" />
 
     <EditText
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Enter Food Name" />
+        android:hint="Add Food Name" />
 
     <Button
         android:id="@+id/buttonAddFood"
